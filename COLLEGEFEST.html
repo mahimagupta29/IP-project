@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+body {
+background-color:black;
+}
+h2 {
+color:yellow;
+background-color:#454E0A;
+}
+
+header{
+background-color:black;
+}
+.container{
+position:realtive;
+}
+.left{
+position: absolute;
+
+right:70px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;}
+form.example input[type=text] {
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 68%;
+    background: #f1f1f1;
+}
+
+form.example button {
+   float:right;
+    width: 20%;
+	
+    padding: 3px;
+    background: blue;
+
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #881409;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #CE2919;
+}
+
+.btn.active {
+    background-color: #CE2919;
+    color: white;
+}
+h2 a{color:white;
+text-decoration:none;}
+.fa {
+  padding: 20px;
+  font-size: 25px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+table{
+text-align:center;
+color:yellow;
+}
+th{
+font-size:30;
+color:white;}
+footer{
+background-color:#333;
+}
+h3{
+color:white;
+}
+</style>
+<body>
+<header><div class="container">
+       <img src="bg1.png"style="width:1270px;height:200px;">
+<div class= "left">
+<form class="example"  style="max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit" >OK</button>
+</form></div></div>
+        <div class="navbar">
+  <a href="#home">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Festival Options
+  
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">College Festivals</a>
+      <a href="#">Art Festivals</a>
+      <a href="#">Food Festivals</a>
+	  <a href="#">Theatre Festivals</a>
+	  <a href="#">Cultural Festivals</a>
+    </div>
+  </div> 
+  
+  <a href="#news">Feedback</a>
+  <a href="#news">About Us</a>
+  <a href="#news">Contact Us</a>
+  <a href="#news">Login</a>
+  <a href="#news">Register</a>
+</div>
+</header><br>
+<br><br>
+<article>
+ <label style="color:#14E6F9; font-family:verdana; font-size:150%; background-color:#08454B;" for="Language">Select College</label>
+ 
+ <img style="float:right;padding:30px;width:650px;height:350px;" id="theImage" src="grey.jpg">
+ <p style="float:right;color:white;font-size:20px;"id="demoa"></p>
+  <p style="float:right;color:white;font-size:20px;"id="demob"></p>
+ 
+ <p style="float:right;padding:10px;color:#15F8DE;font-size:25px;"id="demo"></p>
+ <br><br> <select  style="color:#9E371C; font-family:verdana; font-size:100%; background-color:#FDC4B5;width: 250px;height:40px;margin: 10px;"  id="Language" onchange="theatreChange(this);">
+
+    <option value="empty">Select </option>
+    <option value="TSEC">TSEC</option>
+    <option value="VJTI">VJTI</option>
+    <option value="IIT-B">IIT-B</option>
+	<option value="XAVIER'S">XAVIER'S</option>
+	<option value="K.C">K.C</option>
+	<option value="NM">NM</option>
+  </select>
+  <br><br>
+  <label style="color:#14E6F9; font-family:verdana; font-size:150%; background-color:#08454B;"for="theatre">Select Fest</label>
+  <br><br><select style="color:#9E371C; font-family:verdana; font-size:100%; background-color:#FDC4B5;width: 250px;height:40px;margin: 10px;"id="theatre" >
+    <option value="0">Select a fest</option>
+  </select><br><br>
+
+  <button style="color:#14E6F9; font-family:verdana; font-size:150%; background-color:#08454B;"type="button" onclick="myFunction1()">PROCEED</button>
+    <a style="position:absolute;margin-left:330px;color:#14E6F9; font-family:verdana; font-size:150%; background-color:#08454B;"id="democ" href="#"></a> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+<table style="width:100%">
+<tr>
+<th>Related links</th>
+<th>About Us</th>
+<th>Other Options</th>
+</tr>
+<tr>
+<td>FoodPanda</td>
+<td>Komal Aswani</td>
+<td>Copyrights link</td></tr>
+<tr>
+<td>Trivago</td>
+<td>Mahima Gupta</td>
+<td>Blog</td></tr>
+<tr>
+<td>festpav</td>
+<td>Hiba Hussain</td></tr>
+</table>
+<h3>Contact Us</h3>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a><br>
+<center><h3>@Copyrights 2018</h3></center>
+</footer>
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+function theatreChange(selectObj) { 
+ var playLists = new Array(10) 
+ playLists["empty"] = ["Select a fest"]; 
+ playLists["TSEC"] = ["TECHNEXT - Tech", "RUBIX - Tech", "ELAN - Tech", "HACKATHON - Tech","TRIFLES - Cul","AVALANCHE - Cul","JOY OF GIVING - Soc","BLOOD DONATION - Soc"]; 
+ playLists["VJTI"] = ["PRATIBIMB - Cul", "TECHNOVANZA - Tech", "VASTRA - Tech"]; 
+ playLists["IIT-B"] = ["MOOD INDIGO - Cul", "TECHFEST - Tech"]; 
+ playLists["XAVIER'S"] = ["MALHAR - Cul", "JANWAR - Cul"]; 
+ playLists["K.C"] = ["KIRAN FIESTRON - Tech", "JOULE - Cul"]; 
+ playLists["NM"] = ["DRISHTI - Man", "UMANG - Cul"]; 
+ 
+ var idx = selectObj.selectedIndex; 
+ var which = selectObj.options[idx].value; 
+ cList = playLists[which]; 
+ var cSelect = document.getElementById("theatre"); 
+ var len=cSelect.options.length; 
+ while (cSelect.options.length > 0) { 
+ cSelect.remove(0); 
+ } 
+ var newOption; 
+ // create new options 
+ for (var i=0; i<cList.length; i++) { 
+ newOption = document.createElement("option"); 
+ newOption.value = cList[i];  // assumes option string and value are the same 
+ newOption.text=cList[i];  // add the new option 
+ try { 
+ cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
+ } 
+ catch (e) { 
+ cSelect.appendChild(newOption); 
+ } 
+ } 
+ } 
+function myFunction1() {
+var sel = document.getElementById("theatre");
+var text= sel.options[sel.selectedIndex].text;
+if(text=="TECHNEXT - Tech")
+{document.getElementById("demo").innerHTML = "Unwind the technical spirals to resolve and explore the dimensions in the world of technology with #TECHNEXT18 .";
+	document.getElementById("theImage").src= "TECHNEXT2.jpg";
+	document.getElementById("demoa").innerHTML = "COMPUTER SOCIETY OF INDIA-TSEC | #TechSetGo ";
+	document.getElementById("demob").innerHTML = "Venue:NB FOYER,TSEC | Date:7th & 8th SEPT ";
+	document.getElementById("democ").href= "theatre2.html";
+	document.getElementById("democ").innerHTML= "BOOK NOW";
+	} 
+else if(text=="RUBIX - Tech")
+{document.getElementById("demo").innerHTML = "Time to test your technical skills or improve them with various workshops and fun coding competitions!";
+	document.getElementById("theImage").src= "RUBIX.jpg";
+	document.getElementById("demoa").innerHTML = "COMPUTER SOCIETY OF INDIA-TSEC | #SimplyComplex  ";
+	document.getElementById("demob").innerHTML = "Venue:NB FOYER,TSEC | Date:17th & 18th FEB  ";
+	}
+else if(text=="ELAN - Tech")
+{document.getElementById("demo").innerHTML = "Get an exciting, fun and technical diversion from the rigors of campus life by joining us during ELAN!";
+	document.getElementById("theImage").src= "ELAN2.jpg";
+	document.getElementById("demoa").innerHTML = "IETE-TSEC | #LetTheGamesBegin ";
+	document.getElementById("demob").innerHTML = " Venue:NB FOYER,TSEC | Date:29th SEPT";
+	}
+else if(text=="HACKATHON - Tech")
+{document.getElementById("demo").innerHTML = "Brace your coding skills and get set go to do some programming for the very first Hackathon at TSEC.";
+	document.getElementById("theImage").src= "HACKATHON.jpg";
+	document.getElementById("demoa").innerHTML = "TSEC CodeStorm-Campus Chapter of CodeChef | # ";
+	document.getElementById("demob").innerHTML = " Venue: TSEC | Date:22nd & 23rd SEPT";
+	}
+else if(text=="TRIFLES - Cul")
+{document.getElementById("demo").innerHTML = "This March, get set to shake legs as a few stunning and gorgeous performances burn the arena with the PRONITES in TRIFLES 2hazaar18 presented by TSEC Students' Council.</br>Bollywood Night:Arko Pravo Mukherjee, Yasser Desai, Navraj Hans, Priyanka Negi , Shuchismita Das.</br>EDM Night: TeriMiko and Candice Redding.</br>Comedy Night: presented by Shark&Ink, featuring Varun Thakur & Anirban Dasgupta.";
+	document.getElementById("theImage").src= "TRIFLES.jpg";
+	document.getElementById("demoa").innerHTML = "TSEC Students Council | #TRIFLES2hazaar18 |#EkAakhriBaar";
+	document.getElementById("demob").innerHTML = " Venue: National College Court & Audi| Date:22nd-25th MAR";
+	}
+else if(text=="AVALANCHE - Cul")
+{document.getElementById("demo").innerHTML = "Put on your armor for a fight, it's a battle of freeze against your light. The war of branches is the talent test where victory comes only to the best. This is the friendly strife which will give you companions for life. The TSEC Students' Council presents to you, Avalanche 2018: Fight the freeze!";
+	document.getElementById("theImage").src= "AVALANCHE.jpg";
+	document.getElementById("demoa").innerHTML = "TSEC Students Council | #FightTheFreeze ";
+	document.getElementById("demob").innerHTML = " Venue: TSEC | Date:2Oth & 21st AUG";
+	}
+else if(text=="JOY OF GIVING - Soc")
+{document.getElementById("demo").innerHTML = " It was rightly said by James Russell Miller,</br>Nothing else in all life is such a maker of joy and cheer as the privilege of doing good.</br>NSS-TSEC is organising an event wherein you can witness the JOY OF GIVING.</br>This event is not only for the NSS volunteers but for anyone who wants to help the needy.";
+	document.getElementById("theImage").src= "JOYOF.jpg";
+	document.getElementById("demoa").innerHTML = "NSS_TSEC  | #JoyOfGiving ";
+	document.getElementById("demob").innerHTML = " Venue:NB FOYER,TSEC  | Date:24th -28th SEPT";
+	}
+else if(text=="BLOOD DONATION - Soc")
+{document.getElementById("demo").innerHTML = "NSS-TSEC 2018-19 presents </br>Blood Donation Drive with the Tata Memorial Hospital. Along with the drive, NSS-TSEC has organized a Free Thalassemia Health Check-up with Lions Club for one and all in and around college.</br>Blood is meant to circulate, pass it around! DONATE BLOOD, SAVE LIVES!</br>Remember, you dont need to be a DOCTOR to save lives.• Precautions should be taken before donation.";
+    document.getElementById("theImage").src= "BLOODDON.jpg";
+	document.getElementById("demoa").innerHTML = "NSS_TSEC | #EveryDropCounts ";
+	document.getElementById("demob").innerHTML = " Venue:SL, NB,TSEC.  | Date:4th OCT |Timing : 9 am - 5 pm";
+}
+else if(text=="TECHNOVANZA - Tech")
+{document.getElementById("demo").innerHTML = "The motto of Technovanza is to educate people about the principles of Engineering and thus spreading the knowledge of Engineering and Technology to the society at large.The event's popularity has grown in leaps and bounds over the years and last year close to 35000 people from all over the country attended the event, leading to its grand success. To the under-privileged students in schools the social initiative, Pratigya inspires them to become innovative engineers of tomorrow and to make Mumbai a better place to live, Mission Mumbai gives innovative solutions as future engineers to empower the society. Reaching out to students, industry and the society in general, Technovanza 2017 promises to be bigger than ever!";
+	document.getElementById("theImage").src= "TECHNOVANZA.jpg";
+	document.getElementById("demoa").innerHTML = " IEEE STUDENT BRANCH | #gotechno  ";
+	document.getElementById("demob").innerHTML = " Venue:VJTI | Date:28th-30th DEC";
+	}
+else if(text=="PRATIBIMB - Cul")
+{document.getElementById("demo").innerHTML = "Pratibimb is the annual national level cultural festival of VJTI. Spread over three days, this mega fest consist of inter and intra college competitions with awards catching the eye of many. Events like street dance, fashion show, flash mob, musical nights have their own appeal and glamour. Of these events, Mumbai's got talent leads the rest. Countless efforts have been put to create cognizance about social and environmental issues through the channel of social drives like Raddi collection, Khushi, cleanliness and tree plantation drives.";
+	document.getElementById("theImage").src= "PRATIBIMB.jpg";
+	document.getElementById("demoa").innerHTML = " STUDENT COUNCIL| #lightscameraction ";
+	document.getElementById("demob").innerHTML = " Venue:VJTI  | Date:19th-21st DEC";
+	}
+else if(text=="MOOD INDIGO - Cul")
+{document.getElementById("demo").innerHTML = "Tt is the biggest college cultural fest in Asia.Mood Indigo competitions are based on Music (Singing with the Stars, Western Band, Mantra), Dance (Dancing with the Stars), Theatre (Street Theater, One Act Plays, Skits), Film Making (Director’s Cut), Improvisation (Impromptu Acting, JAM, Extempore), Debate, Stand-up Comedy, Quiz Contests, Poetry, Journalism and other cultural events. Mood Indigo invites celebrities to judge the competitive events. Mood Indigo also offers many non-competitive art and cultural events for visitors to enjoy.";
+	document.getElementById("theImage").src= "MOODINDIGO.png";
+	document.getElementById("demoa").innerHTML = "CULTURAL | #talentfiesta ";
+	document.getElementById("demob").innerHTML = " Venue: IIT-B,POWAI | Date:27th-30th DEC";
+	}
+else if(text=="VASTRA - Tech")
+{document.getElementById("demo").innerHTML = "Initiated in 2003, VASTRA has gained overwhelming response and has now bloomed into one of the most important Textile festivals of our country. It has a footfall of over 5000 students and industry officials from all over the country. It facilitates a platform to students who have excelled in the Textile sector and a wide exposure to everyone visiting the fest. The objectives of VASTRA and its events are to provide a platform for the students to showcase their talent, creativity, innovative skills and to form a strong bond between the institute and various phrases of Textile Industry";
+	document.getElementById("theImage").src= "VASTRA.jpg";
+	document.getElementById("demoa").innerHTML = "VASTRA | #govastra ";
+	document.getElementById("demob").innerHTML = " Venue:VJTI,MATUNGA  | Date:16th-17th MAR";
+	}
+else if(text=="TECHFEST - Tech")
+{document.getElementById("demo").innerHTML = "Techfest provides a platform for one and all to witness one of the most beautiful and groundbreaking amalgamation of science and technology with pure delight and enthusiasm. With display of motivating orations, state of the art technology, cut-throat competitions and breathtaking performances for its audience, Techfest for the past 21 years has served to be the ideal destination for the millenials to learn, create and experience the beauty of technology. ";
+	document.getElementById("theImage").src= "TECHFEST.jpg";
+	document.getElementById("demoa").innerHTML = "STUDENT COMMUNITY | #recognition ";
+	document.getElementById("demob").innerHTML = " Venue:IIT-B,POWAI  | Date:14th-16th DEC";
+	}
+else if(text=="MALHAR - Cul")
+{document.getElementById("demo").innerHTML = " Malhar is known for its revolutionary ideas and creative events. Malhar has become known for some of the biggest college level initiatives, including social cause, yard sale, book sale, its yearly beach clean-up drives Chakachak, its soon-to-become-tradition of flash mobs and the intellectual glitterati it receives as part of its Conclave.Malhar has a ton of cool events lined up, from “Reverberations of Counter-culture” where Conclave brings you a transformation as the spotlight is thrown on the people who have bravely stood out in among the crowds as the only critics in their respective fields, to the newly inaugurated Parliamentary Debate.";
+	document.getElementById("theImage").src= "MALHAR.png";
+	document.getElementById("demoa").innerHTML = " | #atimeturner ";
+	document.getElementById("demob").innerHTML = " Venue:XAVIER COLLEGE  | Date:14th-16th AUG";
+	}
+else if(text=="JANWAR - Cul")
+{document.getElementById("demo").innerHTML = "The Indian Music group (IMG) has always strived to promote love and appreciation for Indian classical music amongst the youth. The organization houses a library in the college, which is a storehouse of many musical treasures. The IMG library has collected, collated, and stored tapes, cassettes and vinyls of many of the most legendary performances where classical legends have enthralled their audience.";
+	document.getElementById("theImage").src= "JANWAR.jpg";
+	document.getElementById("demoa").innerHTML = "INDIAN MUSIC GROUP | #raagmalhar ";
+	document.getElementById("demob").innerHTML = " Venue: XAVIER COLLEGE | Date:26th-27th JAN";
+	}
+else if(text=="DRISHTI - Man")
+{document.getElementById("demo").innerHTML = "Drishti is the quintessential dais for students to bring their talent in the limelight and has participants comprising of students from colleges sprawling all over Mumbai as well as outside it.";
+	document.getElementById("theImage").src= "DRISHTI.jpg";
+	document.getElementById("demoa").innerHTML = "#InnovatingManagement| #WeAreHere ";
+	document.getElementById("demob").innerHTML = " Venue: NM | Date:24th JAN";
+	}
+else if(text=="UMANG - Cul")
+{document.getElementById("demo").innerHTML = "Umang is the Cultural College Festival of Narsee Monjee College Of Commerce and Economics. Tagged as Asia's fastest growing College Fest!!";
+	document.getElementById("theImage").src= "UMANG.jpg";
+	<!--document.getElementById("demoa").innerHTML = " | # ";-->
+	document.getElementById("demob").innerHTML = " Venue: NM COLLEGE,JUHU | Date:13th- 14th AUG";
+	}
+else if(text=="KIRAN FIESTRON - Tech")
+{document.getElementById("demo").innerHTML = "Fiestron is a celebration of technology through various forms. It aims to promote technology among the masses and educate people of how to use technology in a way to improve their lives, and also avoid the harm it can cause, as well as to create a foundation of e-sports in the city as well as all over the country.Fiestron provides an enhanced platform for participants to compete like never before. So seize the opportunity of exploring yourself in Our Tech Territory.";
+	document.getElementById("theImage").src= "KIRAN1.jpeg";
+	document.getElementById("demoa").innerHTML = " KIRAN| #bombaygoojenga ";
+	document.getElementById("demob").innerHTML = " Venue:K.C CHURCHGATE  | Date:2ND-3RD FEB";
+	}
+else if(text=="JOULE - Cul")
+{document.getElementById("demo").innerHTML = "Joule had emerged from the enthralling spirit and enthusiasm of the students of the B4 Department, and hence the name Joule, to signify the ounces of energy filled in each and every student. The motto of the department – From Academia to Industry stands tall and high. The wheels of the industry churn brands every minute. Therefore, we bring to you Kiran presents Joule, “The Big Brand Theory”";
+	document.getElementById("theImage").src= "KIRAN2.jpeg";
+	document.getElementById("demoa").innerHTML = "KIRAN | #Big Brand Theory ";
+	document.getElementById("demob").innerHTML = " Venue:K.C COLLEGE | Date:26TH SEPT";
+	}
+}
+</script>
+</body>
+</html>

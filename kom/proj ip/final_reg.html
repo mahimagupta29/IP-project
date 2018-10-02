@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+background-color:black;
+}
+h2 {
+color:yellow;
+background-color:#454E0A;
+}
+
+header{
+background-color:black;
+}
+.container{
+position:realtive;
+}
+.left{
+position: absolute;
+
+right:70px;
+padding-left:20px;
+padding-right:20px;
+padding-top:10px;}
+form.example input[type=text] {
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 68%;
+    background: #f1f1f1;
+}
+
+form.example button {
+   float:right;
+    width: 20%;
+	
+    padding: 3px;
+    background: blue;
+
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.text {
+  color:#B6F9F3;
+  font-size: 30px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 30px}
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 30px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #881409;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #CE2919;
+}
+
+.btn.active {
+    background-color: #CE2919;
+    color: white;
+}
+h2 a{color:white;
+text-decoration:none;}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+table{
+text-align:center;
+color:yellow;
+}
+th{
+font-size:30;
+color:white;}
+footer{
+background-color:#333;
+}
+h3{
+color:white;
+}
+</style>
+<body>
+<header><div class="container">
+       <img src="bg1.png"style="width:1270px;height:200px;">
+<div class= "left">
+<form class="example"  style="max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit" >OK</button>
+</form></div></div>
+        <div class="navbar">
+  <a href="#home">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn" onclick="myFunction()">Festival Options
+  
+    </button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="#">College Festivals</a>
+      <a href="#">Art Festivals</a>
+      <a href="#">Food Festivals</a>
+	  <a href="theatre.html" target="_blank">Theatre Festivals</a>
+	  <a href="#">Cultural Festivals</a>
+    </div>
+  </div> 
+  
+  <a href="kform.html" target="_blank">Feedback</a>
+  <a href="#news">About Us</a>
+  <a href="#news">Contact Us</a>
+  <a href="#news">Login</a>
+  <a href="#news">Register</a>
+</div>
+</header>
+
+<section id="one">
+	<fieldset>
+	<font color="yellow" size="5">
+		<legend><span id=cd >Welcome!</span></legend>
+		<pre>
+		<span id=ab >First Name :</span> <input type="text">
+		<br>
+		<span id=ab >Last Name  :</span> <input type="text">
+		</br>
+		<span id=ab >Email id   :</span>  <input type="email" placeholder ="X@gmail.com" required/>
+		</br>
+		<span id=ab >Password   :</span>  <input type="password" placeholder="********"/>
+		</br>
+		<span id=ab >Phone no.  :</span> <input type="tel" name="tel" id="tel" required>
+		</br>
+		</pre>
+		<button align="center" onclick="Homepage_H.html">REGISTER</button>
+	</font>
+	</fieldset>
+</section>
+<section id="two"><fieldset>
+<a href="final_login.html"><font face=" Bookman" color="white" size=6><B>ALREADY REGISTERED...</B></font><br></a>
+</fieldset> </section>
+<footer>
+<table style="width:100%">
+<tr>
+<th>Related links</th>
+<th>About Us</th>
+<th>Other Options</th>
+</tr>
+<tr>
+<td>FoodPanda</td>
+<td>Komal Aswani</td>
+<td>Copyrights link</td></tr>
+<tr>
+<td>Trivago</td>
+<td>Mahima Gupta</td>
+<td>Blog</td></tr>
+<tr>
+<td>festpav</td>
+<td>Hiba Hussain</td></tr>
+</table>
+<h3>Contact Us</h3>
+<a href="#" class="fa fa-search"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a><br>
+<center><h3>@Copyrights 2018</h3></center>
+</footer>
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// List View
+function listView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "100%";
+  }
+}
+
+// Grid View
+function gridView() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.width = "30%";
+  }
+}
+
+/* Optional: Add active class to the current button (highlight it) */
+var container = document.getElementById("btnContainer");
+var btns = container.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>
+</html>
+

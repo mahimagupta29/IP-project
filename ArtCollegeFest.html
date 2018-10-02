@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>college fest</title>
+<meta charset="utf-8">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 15px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #a3a375}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+body
+{
+background-image:url("h.png");
+}
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 100px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+}    
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 600px) {
+    article, article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.button {
+    position: absolute;
+    background-color: #4CAF50;
+    border: 2px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1 {
+    border-radius: 12px;
+    font-size: 20px;
+	}
+</style>
+<script type="text/javascript">
+  function swapImage(id,primary,secondary) {
+    src=document.getElementById(id).src;
+    if (src.match(primary)) {
+      document.getElementById(id).src=secondary;
+    } else {
+      document.getElementById(id).src=primary;
+    }
+  }
+  
+  $('#btnClick').on('click',function(){
+    if($('#1').css('display')!='none'){
+    $('#2').html('Here is my dynamic content').show().siblings('div').hide();
+    }else if($('#2').css('display')!='none'){
+        $('#1').show().siblings('div').hide();
+    }
+});
+</script>
+</head>
+<body>
+<IMG SRC="f.png" style="width:100%">
+<ul>
+  <li><a href="#home">HOME</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">FEST</a>
+    <div class="dropdown-content">
+      <a href="#">COLLEGE FEST</a>
+	  <a href="#">ART FEST</a>
+	    <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">COLLEGE FEST</a>
+            <div class="dropdown-content">
+	            <a href="#">TECHNICAL</a
+				<a href="#"></a>
+				<a href="#">SPORTS</a>
+				<a href="#">SOCIAL</a>
+				<a href="#">CULTURAL</a>
+			</div>
+    
+    </div>
+  </li>
+  <li><a href="#contact">CALENDAR</a></li>
+  <li><a href="#contact">BOOKINGS</a></li>
+  <li><a href="#about">ABOUT US</a></li>
+</ul>
+<div class="slideshow-container">
+</div>
+<section>
+  <article>
+ 	<font color="purple" size=6 > COLLEGE:</font>
+     <select name="Colleges">
+       <option value="Z">--SELECT--</option>
+       <option value="T">TSEC</option>
+       <option value="V">VJTI</option>
+       <option value="I">IIT-B</option>
+       <option value="X">XAVIER'S</option>
+       <option value="K">K.C</option>
+       <option value="N">NM</option>
+     </select></br>
+	 </br>
+ 	
+  </article>
+  
+  <article>
+    <font color="#001a66" size="7" ><B>TECHNEXT<B></font></br>
+	<font color="#0033cc" size="5" >COMITTEE:-COMPUTER SOCIETY OF INDIA-TSEC</font>
+    <p><font color="#7300e6">Unwind the technical spirals to resolve and explore the dimensions in the world of technology with #TECHNEXT18 .</font></p>
+    <p><font color="330066" >#TechSetGo</font></p><img id="TECHNEXT" onclick="swapImage('TECHNEXT','TECHNEXT.jpg','TECHNEXT2.jpg')" src="TECHNEXT.jpg" width="1300" height="500">
+	</br><button class="button button1" value="submit">BOOK NOW</button>
+	</br></br></br>
+    <font color="#001a66" size="7" ><B>RUBIX<B></font></br>
+	<font color="#0033cc" size="5" >COMITTEE:COMPUTER SOCIETY OF INDIA-TSEC</font>
+    <p><font color="#7300e6">Time to test your technical skills or improve them with various workshops and fun coding competitions! </font></p>
+    <p><font color="330066" >#SimplyComplex</font></p>	<img src="RUBIX.jpg" width="1300" height="500">
+	</br><button class="button button1" value="submit">BOOK NOW</button>
+	</br></br></br>
+    <font color="#001a66" size="7" ><B>ELAN<B></font></br>
+	<font color="#0033cc" size="5" ><B>COMITTEE:IETE TSEC<B></font>
+    <p><font color="#7300e6">Get an exciting, fun and technical diversion from the rigors of campus life by joining us during ELAN!  .</font></p>
+    <p><font color="330066" >#LetTheGamesBegin</font></p><img id="ELAN" onclick="swapImage('ELAN','ELAN.jpg','ELAN2.jpg')" src="ELAN.jpg" width="1300" height="500">
+    </br><button class="button button1" value="submit">BOOK NOW</button>
+	</br></br></br>
+	<font color="#001a66" size="7" ><B>HACKATHON<B></font></br>
+	<font color="#0033cc" size=""5" >COMITTEE:-TSEC CodeStorm-Campus Chapter of CodeChef </font>
+	<p><font color="#7300e6">Brace your coding skills and get set go to do some programming for the very first Hackathon at TSEC.</font></p>
+	<img src="HACKATHON.jpg" width="1300" height="500">
+	</br><button class="button button1" value="submit">BOOK NOW</button>
+  </article>
+ <div id="1">
+    My Content 1
+</div>
+
+<div id="2" style="display:none;">
+    My Dynamic Content
+</div>
+<button id="btnClick">Click me!</button>
+
+</section>
+<script>
+
+</script>
+</body>
+</html>
