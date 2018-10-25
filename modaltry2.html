@@ -10,17 +10,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style type="text/css">
     .bs-example{
-        background-image: "TECHNEXT.jpg"; /* 16px x 16px */
-        background-color: transparent; /* make the button transparent */
-        background-repeat: no-repeat;  /* make the background image appear only once */
-		background-position: 0px 0px;  /* equivalent to 'top left' */
-		border: none;           /* assuming we don't want any borders */
-        cursor: pointer;        /* make the cursor like hovering over an <a> element */
-		height: 36px;           /* make this the size of your image */
-		padding-left: 16px;     /* make text start to the right of the image */
-		vertical-align: middle; /* align the text vertically centered */
 		margin: 30px;
     }
+
     .modal-content iframe{
         margin: 0 auto;
         display: block;
@@ -57,56 +49,67 @@ $(document).ready(function(){
 <div class="bs-example">
   <h1 style="font-size:80px;" align="center">ART FESTIVAL</h1>
     <!-- Button HTML (to Trigger Modal) -->
-    <a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">KALA GHODA</a>
     
+	<img src="KALAGHODA.jpg" href="#myModal" style="height: 300px;width:550px;border:1px;margin-left:40px;margin-right:50px; " data-toggle="modal"/>
+	
     <!-- Modal HTML -->
     <div id="myModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	
-						
-                    <img src="kalaghoda_icon.png" width="150" height="100"><h4 class="modal-title">KALA GHODA</h4>
-                    <!-- time icon-->
-						<h5 class="modal-title" style="margin-left: 300px;"><span class="glyphicon glyphicon-time"></span>  03-11 Feb 2018</h5>
-					<!--location icon-->
-						<h5 class="modal-title"><a href="#"><span class="glyphicon glyphicon-map-marker"></span></a>Fort,Mumbai,India</h5>
-					</image>
+					<div class="row">
+						<div class="col-md-3">
+							<img src="kalaghoda_icon.png" width="150" height="120"><!-- style="border: 5px solid purple"-->
+						</div>
+						<div class="col-md-6">
+							<!-- time icon-->
+								<h2 style="margin-left:15px;"> KALA GHODA</h2>
+								<h4 class="modal-title" style="margin-left:15px;"><span class="glyphicon glyphicon-time"></span >  03-11 Feb 2018</h4>
+							<!--location icon-->
+								<h4 class="modal-title" style="margin-left:15px;"><a href="#"><span class="glyphicon glyphicon-map-marker"></span></a>Fort,Mumbai,India</h4>		
+						</div>
+					</div>
                 </div>
                 <div class="modal-body">
                     <iframe id="kalaghodaVideo" width="560" height="315" src="https://www.youtube.com/embed/dwHPcS5m-30" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style=""></iframe>
                 </div>
-				<p><b>"Country’s largest multicultural festival"</b>
+				<p style="padding:15px;"><b>"Country’s largest multicultural festival"</b>
 Kala Ghoda Arts Festival, first organised with the object of maintaining and preserving art, culture and heritage of South Mumbai. This event organises a community celebration of the arts within one of the most beautiful and historic precincts of Mumbai. This event draws visitors for it carries out heritage walks, literature fest, music, art shows for the proliferation of the Art and Heritage.</p>
                 <div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">INTERESTED</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-right: 221px;background-color: purple !important; border-color: purple !important">INTERESTED</button>
 				</div>
 			</div>
         </div>
     </div>
 	
-	    <a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">INDIA ART FESTIVAL</a>
+	<img src="NEHRU.jpg" href="#myModal2" style="height: 300px;width:550px;border:1px;margin-left:40px;margin-right:50px;" data-toggle="modal"/>
     <!-- Modal HTML -->
-    <div id="myModal" class="modal fade">
+    <div id="myModal2" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <img src="kalaghoda_icon.png" width="150" height="100"><h4 class="modal-title">INDIA ART FESTIVAL</h4>
+					<div class="row">
+						<div class="col-md-3">
+							<img src="india-art-festival_icon.jpg" width="150" height="120"><!-- style="border: 5px solid purple"-->
+						</div>
+						<div class="col-md-8">
+                    <h2 style="margin-left:15px;">INDIA ART FESTIVAL</h2>
                     <!-- time icon-->
-						<h5 class="modal-title"><span class="glyphicon glyphicon-time"></span>  17-20 Jan 2019</h5>
+						<h4 class="modal-title" style="margin-left:15px;"><span class="glyphicon glyphicon-time"></span>  17-20 Jan 2019</h4>
 					<!--location icon-->
-						<h5 class="modal-title"><a href="#"><span class="glyphicon glyphicon-map-marker"></span></a>Nehru Centre,Mumbai,India</h5>
-					</image>
-                </div>
+						<h4 class="modal-title" style="margin-left:15px;"><a href="#"><span class="glyphicon glyphicon-map-marker"></span></a>Nehru Centre,Mumbai,India</h4>
+						</div>
+					</div>
+				</div>
                 <div class="modal-body">
-                    <iframe id="kalaghodaVideo" width="560" height="315" src="https://www.youtube.com/embed/ptYNx0OF5Ew?rel=0&amp;start=28" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>></iframe>
+                    <iframe id="kalaghodaVideo" width="560" height="315" src="https://www.youtube.com/embed/ptYNx0OF5Ew?rel=0&amp;start=28" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>
                 </div>
-				<p><b>"A modern and contemporary art fair."</b>
-India Art Festival showcases product from Gifts & Handicrafts industry which include paintings, sculptures, ceramics etc. The interaction and communication between the art collectors and artists of the contemporary times will give rise to new and innovative ideas. This will also be attended by leading experts related to the sector of art and craft. It will bring forward the importance and value of modern, fine and contemporary art in the recent times. The significance of art development and innovations which are taking place in the sector of art and craft will be highlighted in this event.</p>
+				<p style="padding:15px;"><b>"A modern and contemporary art fair."</b>
+India Art Festival showcases product from Gifts & Handicrafts industry which include paintings, sculptures. The interaction and communication between the art collectors and artists of the contemporary times will give rise to new and innovative ideas. It will bring forward the importance and value of modern, fine and contemporary art in the recent times. The significance of art development and innovations which are taking place in the sector of art and craft will be highlighted.</p>
                 <div class="modal-footer">
-					<button type="button" class="btn btn-danger" data-dismiss="modal">INTERESTED</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-right: 221px;background-color: purple !important; border-color: purple !important" >INTERESTED</button>
 				</div>
 			</div>
         </div>
