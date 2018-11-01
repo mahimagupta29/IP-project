@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{background-color:#DFBDFF;}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+#headd{width:1250px;height:250px;}
+header{width:100%;
+background-color:black;
+}
+.container1{
+position:realtive;
+}
+
+.navbar {width:1250px;
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+  header{width:50%;}
+  #headd{width:350px;height:100px;}
+  .navbar {width:33%;}
+  
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+footer{height:400px;}
+.active {
+  background-color: #717171;
+}
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+table{
+text-align:center;
+color:yellow;
+}
+th{
+font-size:30;
+color:white;}
+footer{
+background-color:#333;
+}
+h3{
+color:white;
+}
+</style>
+</head>
+<body>
+<header><div class="container1">
+       <img src="bghhh.jpg" id="headd">
+	   
+<div class= "left">
+</div></div>
+        <div class="navbar">
+  <a href="start.html">Home</a>
+  <a href="about_us.html">About Us</a>
+  <a href="about_us.html#contact">Contact Us</a>
+</div>
+</header>
+</br>
+</br>
+
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="kom.jpg" alt="Jane" style="width:100%">
+      <div class="container" id="komal">
+        <h2>Komal Aswani</h2>
+        <p class="title">IT Student</p>
+        <p>Thadomal Shahani Engineering College</p>
+        <p>komalaswani98@gmail.com</p>
+        <p><a href="https://www.facebook.com/komal.aswani.7"target="_blank"><button class="button">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="hiba.jpg" alt="Mike" style="width:100%">
+      <div class="container" id="hiba">
+        <h2>Hiba Hussain</h2>
+        <p class="title">IT Student</p>
+        <p>Thadomal Shahani Engineering College</p>
+        <p>hiba2hussain@gmail.com</p>
+        <p><a href="https://www.facebook.com/hiba.hussain.1257"target="_blank"><button class="button">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <img src="mah.jpg" alt="John" style="width:100%">
+      <div class="container" id="mahima">
+        <h2>Mahima Gupta</h2>
+        <p class="title">IT Student</p>
+        <p>Thadomal Shahani Engineering College</p>
+        <p>mahimag62@gmail.com</p>
+        <p><a href="https://www.facebook.com/mahima.gupta.39794895"target="_blank"><button class="button">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+</div>
+<footer style="width:1250px;"><br><br><br>
+<table style="width:100%">
+<tr>
+<th>Related links</th>
+<th>About Us</th>
+<th>Other Options</th>
+</tr>
+<tr>
+<td><a href="https://www.foodpanda.in" target="_blank" style="text-decoration:none;color:yellow;">FoodPanda</td></a>
+<td><a href="about_us.html#komal"  style="text-decoration:none;color:yellow;">Komal Aswani</td></a>
+<td>Copyrights link</td></tr>
+<tr>
+<td><a href="https://www.trivago.in" target="_blank" style="text-decoration:none;color:yellow;">Trivago</td></a>
+<td><a href="about_us.html#hiba"  style="text-decoration:none;color:yellow;">Mahima Gupta</td></a>
+<td>Blog</td></tr>
+<tr>
+<td><a href="https://festpav.com" target="_blank" style="text-decoration:none;color:yellow;">festpav</td></a>
+<td><a href="about_us.html#mahima"  style="text-decoration:none;color:yellow;">Hiba Hussain</td></tr></a>
+</table>
+<div id='contact'><h3>Contact Us</h3>
+<a href="https://www.facebook.com/hiba.hussain.1257"target="_blank" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a><br>
+<center><h3>@Copyrights 2018</h3></center>
+</footer>
+</body>
+</html>
+

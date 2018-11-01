@@ -1,0 +1,59 @@
+create table AM3
+(
+  
+  total int not null,
+  attend int not null,
+  rollno int references students(rollno)
+  
+ );
+create table art
+(
+event_id varchar(100) primary key,
+event_name varchar(100) not null,
+tickets_no int not null,
+price int not null,
+venue varchar(100),
+descp varchar(1000)
+ );
+ 
+ create table food
+(
+event_id varchar(100) primary key,
+event_name varchar(100) not null,
+tickets_no int not null,
+price int not null,
+venue varchar(100)
+ );
+insert into theatre values(1,'Mirror_Mirror',50,500,"Multiple_Venues",'a story of sibling rivalry that traces the relationship between identical twins Minal and Maanya.');
+insert into theatre values(2,'Detecive Nau do gyarah',50,710,"Multiple_Venues",'');
+insert into theatre values(3,'3 and a half men',50,299,"Multiple_Venues",'');
+insert into theatre values(4,'Jab Khuli Kitaab',50,300,"Multiple_Venues",'');
+insert into theatre values(5,'Dreams Seher',50,350,"Multiple_Venues",'');
+insert into theatre values(6,'Godaan',50,299,"Multiple_Venues",'');
+insert into theatre values(7,'Tera Divas Premache',50,250,"Multiple_Venues",'');
+insert into theatre values(8,'Gav Khata',50,299,"Multiple_Venues",'');
+insert into theatre values(9,'Sakhar Khallela Manus',50,299,"Multiple_Venues",'');
+update theatre SET descp='A satirical comical situation that emerges out of a grim scenario.' WHERE event_id=7;
+
+insert into food values(71,'Unlimited Chinese Week',50,750,"Dumpling Khang");
+insert into food values(72,'Creed Oktober Fest',50,100,"Chitrarth Studio, Powai");
+insert into food values(73,'Pani Puri Eating Competition',50,200,"St Anthonys Girls High School");
+insert into food values(74,'This Crazy Food Festival',50,300,"Mahalakshmi Race Course , Mumbai");
+
+insert into art values(61,' KALA GHODA',50,0,"Fort,Mumbai,India",'Country’s largest multicultural festival.');
+insert into art values(62,'INDIA ART FESTIVAL',50,400,"Nehru Centre,Mumbai,India",'A modern and contemporary art fair.');
+insert into art values(63,'KALAA SPANDAN',50,500,"Nehru Centre, Worli, Mumbai,India",'The art arena an opportunity to showcase their artistic talents');
+
+
+
+
+create table billdetails
+(
+  username varchar(100) references customers(username),
+event_name varchar(100) not null ,
+tickets_no int not null,
+  price int not null,
+  payment_mode varchar(100) not null
+
+  
+ );
